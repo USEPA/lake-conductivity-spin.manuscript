@@ -7,7 +7,7 @@ library(spmodel)
 library(sf)
 library(knitr)
 
-path <- "C:/Users/mdumelle/OneDrive - Environmental Protection Agency (EPA)/Profile/Documents/pc1_documents/publications/spatialstat2023.si/"
+path <- str_c(here(), "/")
 
 LogCn_limits <- c(0, 11.1)
 
@@ -15,7 +15,7 @@ LogCn_limits <- c(0, 11.1)
 ######### Figure
 ################################################################################
 
-nla <- read_csv(str_c(path, "nla.csv")) |>
+nla <- read_csv(str_c(path, "data/nla_obs.csv")) |>
   mutate(LogCn = log(COND_RESULT))
 
 nla_2007 <- nla |>

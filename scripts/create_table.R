@@ -1,7 +1,8 @@
 library(tidyverse)
 library(xtable)
+library(here)
 
-dat <- read_csv("C:/Users/mdumelle/OneDrive - Environmental Protection Agency (EPA)/Profile/Documents/pc1_documents/publications/spatialstat2023.si/output/cv_model_comp.csv")
+dat <- read_csv(here("output", "model_output", "cv_model_comp.csv"))
 
 dat <- dat[-41, -c(3, 5, 9, 13)]
 
